@@ -6,6 +6,7 @@ let validityText;
 let droite;
 let a = 1;
 let b = 0;
+let degree = 1;
 
 
 function setup() {
@@ -93,7 +94,18 @@ function resizeGrid(W,H,CW) {
   setup();
 }
 
+function changeDegree() {
+  let example = document.getElementById("exampleFunc");
+  if (degree === 1) {
+    example.innerHTML = "f(x) = ax^2 + b";
+    degree = 2;
+  } else if (degree === 2) {
+    example.innerHTML = "f(x) = ax + b";
+    degree = 1;
+  }
+  update();
 
+}
 
 
   // if (!((canvasW/100)%(canvasH/100) === 0 || (canvasW/100)%(canvasH/100) === 2)) {

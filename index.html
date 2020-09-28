@@ -17,9 +17,12 @@
 </head>
 <body>
   <div id="canvas1"></div>
-  <label>f(x) = ax + b</label>
+  <label id="exampleFunc">f(x) = ax + b</label>
+  <br>
   <input placeholder="a" type="number" value="1" id="inputA" oninput="update()">
   <input placeholder="b" type="number" value="0" id="inputB" oninput="update()">
+  <br>
+  <button onclick="changeDegree()">Change function degree</button>
   <br><br>
   <div id="gridButtons">
     <label>Change grid size</label>

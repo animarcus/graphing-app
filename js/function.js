@@ -4,11 +4,19 @@ class func {
     this.b = Number(b);
     this.domain = [-canvasW/2, canvasW/2];
     this.results = [];
-    console.log(this.a);
+    if (degree === 1) {
+      this.iterate = 1;
+    } else if (degree === 2) {
+      this.iterate = 0.2;
+    }
   }
   calc1dFunc() {
-    for (let x = this.domain[0]/cellW; x <= this.domain[1]/cellW; x += 1) {
-      this.y = this.a*x+this.b;
+    for (let x = this.domain[0]/cellW; x <= this.domain[1]/cellW; x += this.iterate) {
+      if (degree === 1) {
+        this.y = this.a*x+this.b;
+      } else if (degree === 2) {
+        this.y = this.a*x*x+this.b;
+      }
       this.currentRes = {"x": x, "y": this.y};
       this.results.push(this.currentRes);
     }
