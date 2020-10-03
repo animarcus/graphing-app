@@ -1,6 +1,6 @@
 let graph = [];
-let canvasW = 400;
-let canvasH = 400;
+let canvasW = 200;
+let canvasH = 200;
 let cellW = 50;
 let validityText;
 let droite;

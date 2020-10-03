@@ -33,7 +33,7 @@ class func {
       stroke('rgba(0%, 0%, 0%, 1)');
       line(previous.x, -previous.y, current.x, -current.y);
       stroke('rgba(0%, 0%, 0%, 0)');
-      rect(current.x-5,-current.y-5,10,10);
+      rect(current.x-2,-current.y-2,4,4);
       if (current.x/cellW !== 0) {
         // text(["(",current.x/cellW ,";" , current.y/cellW, ")"].join(""), current.x +cellW/2, -current.y +cellW/2);
       }
